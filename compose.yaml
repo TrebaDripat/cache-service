@@ -1,0 +1,15 @@
+services:
+  cache:
+    build: .
+    image: payload-cache-service:local
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      CACHE_DATABASE_PATH: /data/cache.db
+      CACHE_DATABASE_TIMEOUT: "30"
+    volumes:
+      - cache-data:/data
+    restart: unless-stopped
+
+volumes:
+  cache-data:

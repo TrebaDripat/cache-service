@@ -1,0 +1,15 @@
+.git
+.venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.ruff_cache
+.unlazy
+.env
+data
+dist
+*.db*
+tests
+scripts
+docs
+GATES.md
